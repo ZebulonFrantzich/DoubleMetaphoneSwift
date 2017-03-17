@@ -93,8 +93,7 @@ DESC
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = 'DoubleMetaphoneSwift/Classes/**/*', 'DoubleMetaphoneSwift/double_metaphone/*.{c,h}', 'DoubleMetaphoneSwift/double_metaphone/aes/*.{c,h}'
-  s.exclude_files = "Classes/Exclude"
+  s.source_files  = 'DoubleMetaphoneSwift/**', 'DoubleMetaphoneSwift/Classes/**/*', 'DoubleMetaphoneSwift/double_metaphone/**' #'DoubleMetaphoneSwift/double_metaphone/*.{c,h}', 'DoubleMetaphoneSwift/double_metaphone/aes/*.{c,h}'
 
   # s.public_header_files = "Classes/**/*.h"
 
