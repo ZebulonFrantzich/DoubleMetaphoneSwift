@@ -1,0 +1,4 @@
+module double_metaphone [system][extern_c] {
+    header "DoubleMetaphoneImpl.h"
+    export *
+}
