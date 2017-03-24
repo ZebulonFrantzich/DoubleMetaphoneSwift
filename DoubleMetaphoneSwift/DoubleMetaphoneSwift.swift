@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import double_metaphone
+import double_metaphone_swift
 
 public class DoubleMetaphoneSwift: NSObject {
     let impl = DoubleMetaphoneImpl()
@@ -19,7 +19,6 @@ public class DoubleMetaphoneSwift: NSObject {
     }
     
     private func calculate(input: String) -> (String, String)? {
-        
         guard let response = impl.calculate(input as String!), let primary = response[0] as? String, let secondary = response[1] as? String else {
             return nil
         }

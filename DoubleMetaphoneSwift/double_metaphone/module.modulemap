@@ -1,4 +1,4 @@
-module double_metaphone [system][extern_c] {
+module double_metaphone_swift [system][extern_c] {
     header "DoubleMetaphoneImpl.h"
     export *
 }
