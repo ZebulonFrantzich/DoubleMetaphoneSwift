@@ -16,7 +16,6 @@ Import DoubleMetaphoneSwift at the top of the Swift file.
 import DoubleMetaphoneSwift
 ```
 
-## Use
 The returned Double Metaphone calculation returns the primary and secondary calculations as a tuple.
 ```swift
 guard let (primary, secondary) = DoubleMetaphoneSwift.calculate(input: "Hello World!") else {
