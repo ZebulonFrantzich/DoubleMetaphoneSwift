@@ -1,3 +1,6 @@
+// swift-tools-version:5.0
+
+
 // Package.swift
 //
 // Copyright © 2017 Zebulon Frantzich
@@ -20,11 +23,21 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-
 import PackageDescription
 
 let package = Package(
     name: "DoubleMetaphoneSwift",
-    dependencies : [],
-    exclude: ["Tests"]
+    products: [
+        .library(
+            name: "DoubleMetaphoneSwift",
+            targets: ["DoubleMetaphoneSwift"]
+        )
+    ],
+    targets: [
+        .target(
+            name: "DoubleMetaphoneSwift",
+            path: "DoubleMetaphoneSwift",
+            exclude: ["double_metaphone", "double_metaphone.c", "double_metaphone.h", "DoubleMetaphoneImpl.h", "DoubleMetaphoneImpl.m", "module.modulemap"]
+        )
+    ]
 )
