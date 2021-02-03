@@ -19,7 +19,7 @@ public class DoubleMetaphoneSwift: NSObject {
     }
     
     private func calculate(input: String) -> (String, String)? {
-        guard let response = impl.calculate(input as String!), let primary = response[0] as? String, let secondary = response[1] as? String else {
+        guard let response = impl.calculate(input as String?), let primary = response[0] as? String, let secondary = response[1] as? String else {
             return nil
         }
         
