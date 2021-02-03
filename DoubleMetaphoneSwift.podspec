@@ -32,10 +32,10 @@ DESC
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.requires_arc = true
 
-  s.source_files = 'DoubleMetaphoneSwift/*.{swift,h}', 'DoubleMetaphoneSwift/double_metaphone/*.{c,h,m}', 'DoubleMetaphoneSwift/double_metaphone/aes/*.{c,h,m}'
-  s.public_header_files = 'DoubleMetaphoneSwift/*.h'
-  s.pod_target_xcconfig = {'SWIFT_INCLUDE_PATHS' => '$(SRCROOT)/DoubleMetaphoneSwift/DoubleMetaphoneSwift/double_metaphone/**','LIBRARY_SEARCH_PATHS' => '$(SRCROOT)/DoubleMetaphoneSwift/DoubleMetaphoneSwift/'}
+  s.source_files = 'Sources/DoubleMetaphoneSwift/*.{swift,h}', 'Sources/DoubleMetaphone/include/*.{h}', 'Sources/DoubleMetaphone/src/*.{c,m}'
+  s.public_header_files = 'Sources/DoubleMetaphoneSwift/*.h'
+  s.pod_target_xcconfig = {'SWIFT_INCLUDE_PATHS' => '$(SRCROOT)/DoubleMetaphoneSwift/Sources/DoubleMetaphone/**','LIBRARY_SEARCH_PATHS' => '$(SRCROOT)/DoubleMetaphoneSwift/Sources/DoubleMetaphoneSwift/'}
   s.libraries = 'z'
-  s.preserve_paths  = 'DoubleMetaphoneSwift/double_metaphone/module.modulemap'
+  s.preserve_paths  = 'Sources/DoubleMetaphone/include/module.modulemap'
 
 end
