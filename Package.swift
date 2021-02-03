@@ -30,14 +30,16 @@ let package = Package(
     products: [
         .library(
             name: "DoubleMetaphoneSwift",
-            targets: ["DoubleMetaphoneSwift"]
+            targets: ["DoubleMetaphone", "DoubleMetaphoneSwift"]
         )
     ],
     targets: [
         .target(
+            name: "DoubleMetaphone"
+        ),
+        .target(
             name: "DoubleMetaphoneSwift",
-            path: "DoubleMetaphoneSwift",
-            exclude: ["double_metaphone", "double_metaphone.c", "double_metaphone.h", "DoubleMetaphoneImpl.h", "DoubleMetaphoneImpl.m", "module.modulemap"]
+            dependencies: ["DoubleMetaphone"]
         )
     ]
 )
